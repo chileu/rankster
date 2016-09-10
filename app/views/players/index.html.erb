@@ -1,1 +1,11 @@
-<h1>Welcome to my web app</h1>
+<% @players.each do |player| %>
+  <div>
+    <h2><%= player.name %></h2>
+    <h3>Residence: <%= player.residence %></h3>
+    <h3>Birthdate: <%= player.birthdate %></h3>
+    <h3>Height: <%= player.height %></h3>
+    <h3>Weight: <%= player.weight %></h3>
+    <h3>Plays: <%= player.plays %></h3>
+    <h3>Status: <%= player.status %></h3>
+  </div>
+<% end %>
