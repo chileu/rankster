@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   root 'players#index'
+
+  resources :players
+  get 'all', to: 'players#all'
+  get 'men', to: 'players#men'
+  get 'women', to: 'players#women'
+  get 'about', to: 'players#about'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,11 +1,57 @@
-<% @players.each do |player| %>
-  <div>
-    <h2><%= player.name %></h2>
-    <h3>Residence: <%= player.residence %></h3>
-    <h3>Birthdate: <%= player.birthdate %></h3>
-    <h3>Height: <%= player.height %></h3>
-    <h3>Weight: <%= player.weight %></h3>
-    <h3>Plays: <%= player.plays %></h3>
-    <h3>Status: <%= player.status %></h3>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag 'slider4.jpg', class: 'img-responsive'%>
+      <div class="carousel-caption">
+        Rate your favorite players
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag 'slider2.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        Share comments and fan photos
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag 'slider3.jpg', class: 'img-responsive' %>
+      <div class="carousel-caption">
+        See how others rated them!
+      </div>
+    </div>
   </div>
-<% end %>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br />
+
+<div class=text-center>
+  <h1>Select players to view and rate below</h1>
+</div>
+
+<br />
+
+
+<div class='col-xs-10 col-xs-offset-2 col-sm-4 col-sm-offset-4'>
+  <%= link_to "Men's Players", men_path, class: 'btn btn-primary btn-lg btn-block' %>
+<br />
+  <%= link_to "Women's Players", women_path, class: 'btn btn-primary btn-lg btn-block' %>
+<br />
+  <%= link_to "All Players", all_path, class: 'btn btn-primary btn-lg btn-block' %>
+</div>
