@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'players#index'
 
-  resources :players
+  resources :players do
+    resources :photos, only: :create
+  end
+    
   get 'all', to: 'players#all'
   get 'men', to: 'players#men'
   get 'women', to: 'players#women'
