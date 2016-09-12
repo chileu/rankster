@@ -3,6 +3,15 @@ class PlayersController < ApplicationController
   def index
   end  
 
+  def new
+    @player = Player.new
+  end  
+
+  def create
+    @player = Player.create(player_params)
+    redirect_to all_path
+  end
+
   def all
     @players = Player.order(:id)
   end  
@@ -20,8 +29,13 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
-    
   end  
+
+private
+
+def player_params
+  params.require(:player).permit(:name, :residence, :height, :weight, :plays, :status, :gender)
+end  
 
 
 end

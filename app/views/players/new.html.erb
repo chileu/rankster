@@ -1,0 +1,15 @@
+<div class='players-box col-xs-6 col-xs-offset-3'>
+  <h1>Add a new player</h1>
+  <%= simple_form_for @player do |f| %>
+    <%= f.input :name %>
+    <%= f.input :gender, as: :select, collection: Player::GENDER %>
+    <%= f.input :residence, placeholder: 'e.g. Palm Beach, FL, USA' %>
+    <%= f.input :height, placeholder: "e.g. 5'9\""  %>
+    <%= f.input :weight, placeholder: 'e.g. 155 lbs' %>
+    <%= f.input :plays, placeholder: 'e.g. Right-handed (One-handed backhand)' %>
+    <%= f.input :status, placeholder: 'e.g. Pro (1999), Retired (2002), etc.' %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <br /><br />
+  <% end %>  
+</div>  
