@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
   end  
@@ -8,7 +9,7 @@ class PlayersController < ApplicationController
   end  
 
   def create
-    @player = Player.create(player_params)
+    current_user.players.create(player_params)
     redirect_to all_path
   end
 
