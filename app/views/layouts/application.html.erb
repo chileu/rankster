@@ -29,18 +29,23 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Link</a></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>  
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <%= link_to new_player_path do %>
+          <i class="glyphicon glyphicon-plus"></i>
+            Add a Player  
+          <% end %>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-left">
         <li><a href="#">Link</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-left">
-      <li>
-        <%= link_to new_player_path do %>
-        <i class="glyphicon glyphicon-plus"></i>
-        Add a Player  
-        <% end %>
-      </li>
       </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">
