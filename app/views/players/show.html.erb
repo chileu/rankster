@@ -20,12 +20,14 @@
 <%= simple_form_for @comment, url: player_comments_path(@player) do |f| %>
   <%= f.submit 'Rate this player', class: 'btn btn-info' %>
   <%= f.input :message %>
-  <%= f.input :rating %>
+  <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
 <% end %>
 
 <% @player.comments.each do |comment| %>
   <blockquote>
-    <b><%= comment.rating %></b> -
+    <%if comment.humanized_rating.present? %>
+      <b><%= comment.humanized_rating %></b> -
+    <% end %>
     <%= comment.message %>
     <small><%= comment.user.username %></small>
   </blockquote>
