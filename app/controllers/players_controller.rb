@@ -49,11 +49,11 @@ class PlayersController < ApplicationController
   end  
 
   def men
-    @players = Player.where(gender: 'male').select([:id, :name])
+    @players = Player.where(gender: 'male').select([:id, :user_id, :name])
   end
   
   def women
-    @players = Player.where(gender: 'female').select([:id, :name])
+    @players = Player.where(gender: 'female').select([:id, :user_id, :name])
   end  
 
   def about

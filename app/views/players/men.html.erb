@@ -5,5 +5,8 @@
 <% @players.each do |player| %>
   <div class="players-box col-xs-10 col-xs-offset-1">
     <h2><%= link_to player.name, player_path(player) %></h2>
+    <% if player.user.present? %>
+      <small>Added by: <%= player.user.username %></small>
+    <% end %>  
   </div>
 <% end %>
