@@ -4,6 +4,10 @@ class PlayersController < ApplicationController
   def index
   end  
 
+  def show
+    @player = Player.find(params[:id])
+  end 
+
   def new
     @player = Player.new
   end  
@@ -12,6 +16,16 @@ class PlayersController < ApplicationController
     current_user.players.create(player_params)
     redirect_to all_path
   end
+
+  def edit
+    @player = Player.find(params[:id])
+  end  
+
+  def update
+    @player = Player.find(params[:id])
+    @player.update_attributes(player_params)
+    redirect_to player_path
+  end  
 
   def all
     @players = Player.order(:id)
@@ -26,10 +40,6 @@ class PlayersController < ApplicationController
   end  
 
   def about
-  end  
-
-  def show
-    @player = Player.find(params[:id])
   end  
 
 private

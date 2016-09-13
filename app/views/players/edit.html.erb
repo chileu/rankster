@@ -1,0 +1,15 @@
+<div class='players-box col-xs-6 col-xs-offset-3'>
+  <h1>Edit player profile</h1>
+  <%= simple_form_for @player do |f| %>
+    <%= f.input :name %>
+    <%= f.input :gender, as: :select, collection: Player::GENDER %>
+    <%= f.input :residence %>
+    <%= f.input :height %>
+    <%= f.input :weight %>
+    <%= f.input :plays %>
+    <%= f.input :status %>
+    <br />
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <br /><br />
+  <% end %>  
+</div>  
