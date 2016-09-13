@@ -23,6 +23,14 @@
   <%= f.input :rating %>
 <% end %>
 
+<% @player.comments.each do |comment| %>
+  <blockquote>
+    <b><%= comment.rating %></b> -
+    <%= comment.message %>
+    <small><%= comment.user.username %></small>
+  </blockquote>
+<% end %>
+
 <div class="clear"></div>
 
 <h1>Photos</h1>
