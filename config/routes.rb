@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'players#index'
 
   resources :players do
+    resources :comments, only: :create
     resources :photos, only: :create
   end
     
