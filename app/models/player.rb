@@ -1,6 +1,7 @@
 class Player < ActiveRecord::Base
   belongs_to :user
   has_many :photos
+  has_many :comments
 
   validates :name, presence: true, length: { minimum: 3 }
   validates :gender, presence: true
