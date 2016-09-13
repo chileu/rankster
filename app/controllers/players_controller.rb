@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
   end  
@@ -13,8 +13,12 @@ class PlayersController < ApplicationController
   end  
 
   def create
-    current_user.players.create(player_params)
-    redirect_to all_path
+    @player = current_user.players.create(player_params)
+    if @player.valid?
+      redirect_to all_path
+    else
+      render :new, status: :unprocessable_entity
+    end   
   end
 
   def edit
@@ -24,7 +28,20 @@ class PlayersController < ApplicationController
   def update
     @player = Player.find(params[:id])
     @player.update_attributes(player_params)
-    redirect_to player_path
+    if @player.valid?
+      redirect_to player_path
+    else
+      render :edit, status: :unprocessable_entity
+    end    
+  end  
+
+  def destroy
+    @player = Player.find(params[:id])
+    if current_user != @player.user
+      return render text: 'Not Allowed', status: :forbidden 
+    end  
+    @player.destroy
+    redirect_to all_path
   end  
 
   def all
