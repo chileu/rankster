@@ -38,14 +38,19 @@
       </ul>
       <ul class="nav navbar-nav navbar-left">
         <li>
+          <%= link_to all_path do %>
+          <i class="glyphicon glyphicon-pencil"></i>
+            Rate a player 
+          <% end %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
           <%= link_to new_player_path do %>
           <i class="glyphicon glyphicon-plus"></i>
             Add a Player  
           <% end %>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Link</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">

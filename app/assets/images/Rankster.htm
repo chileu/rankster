@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3030/players/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Rankster</title>
+  <link data-turbolinks-track="false" href="./Rankster_files/comments.css" media="all" rel="stylesheet">
+<link data-turbolinks-track="false" href="./Rankster_files/fonts.css" media="all" rel="stylesheet">
+<link data-turbolinks-track="false" href="./Rankster_files/master.css" media="all" rel="stylesheet">
+<link data-turbolinks-track="false" href="./Rankster_files/photos.css" media="all" rel="stylesheet">
+<link data-turbolinks-track="false" href="./Rankster_files/players.css" media="all" rel="stylesheet">
+<link data-turbolinks-track="false" href="./Rankster_files/application.css" media="all" rel="stylesheet">
+  <script data-turbolinks-track="false" src="./Rankster_files/jquery.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/comments.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/photos.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/players.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/affix.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/alert.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/button.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/carousel.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/collapse.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/dropdown.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/tab.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/transition.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/scrollspy.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/modal.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/tooltip.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/popover.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/bootstrap-sprockets.js"></script>
+<script data-turbolinks-track="false" src="./Rankster_files/application.js"></script>
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="50uvlEdpPiU3hR6LTM+ug/kdzRdq7YkmuADawOoKsiI=" name="csrf-token">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:3030/">Rankster</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+        <a href="http://localhost:3030/about">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+          <li><a data-method="delete" href="http://localhost:3030/users/sign_out" rel="nofollow">Sign Out</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a href="http://localhost:3030/all">
+          <i class="glyphicon glyphicon-pencil"></i>
+            Rate a player 
+</a>        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a href="http://localhost:3030/players/new">
+          <i class="glyphicon glyphicon-plus"></i>
+            Add a Player  
+</a>        </li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search players">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="players-box col-xs-8 col-xs-offset-2">
+  <br> <br>
+  <h1>Add a new player</h1>
+  <form accept-charset="UTF-8" action="http://localhost:3030/players" class="simple_form new_player" id="new_player" method="post" novalidate="novalidate"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="50uvlEdpPiU3hR6LTM+ug/kdzRdq7YkmuADawOoKsiI="></div>
+    <div class="input string required player_name"><label class="string required" for="player_name"><abbr title="required">*</abbr> Name</label><input class="string required form-control" id="player_name" name="player[name]" type="text"></div>
+    <div class="input select required player_gender"><label class="select required" for="player_gender"><abbr title="required">*</abbr> Gender</label><select class="select required form-control" id="player_gender" name="player[gender]"><option value=""></option>
+<option value="male">Male</option>
+<option value="female">Female</option></select></div>
+    <div class="input string required player_residence"><label class="string required" for="player_residence"><abbr title="required">*</abbr> Residence</label><input class="string required form-control" id="player_residence" name="player[residence]" placeholder="e.g. Palm Beach, FL, USA" type="text"></div>
+    <div class="input string required player_height"><label class="string required" for="player_height"><abbr title="required">*</abbr> Height</label><input class="string required form-control" id="player_height" name="player[height]" placeholder="e.g. 5&#39;9&quot;" type="text"></div>
+    <div class="input string required player_weight"><label class="string required" for="player_weight"><abbr title="required">*</abbr> Weight</label><input class="string required form-control" id="player_weight" name="player[weight]" placeholder="e.g. 155 lbs" type="text"></div>
+    <div class="input string required player_plays"><label class="string required" for="player_plays"><abbr title="required">*</abbr> Plays</label><input class="string required form-control" id="player_plays" name="player[plays]" placeholder="e.g. Right-handed (One-handed backhand)" type="text"></div>
+    <div class="input string required player_status"><label class="string required" for="player_status"><abbr title="required">*</abbr> Status</label><input class="string required form-control" id="player_status" name="player[status]" placeholder="e.g. Pro (1999), Retired (2002), etc." type="text"></div>
+    <br>
+    <input class="btn btn-info" name="commit" type="submit" value="Add player">
+    <br><br>
+</form></div>  
+
+
+
+</body></html>

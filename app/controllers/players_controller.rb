@@ -7,6 +7,7 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
     @comment = Comment.new
+    @photo = Photo.new
   end 
 
   def new
